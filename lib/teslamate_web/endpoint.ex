@@ -9,6 +9,8 @@ defmodule TeslaMateWeb.Endpoint do
   ]
 
   plug TeslaMateWeb.HealthCheck
+  
+  plug TeslaMateWeb.Version
 
   socket "/live", Phoenix.LiveView.Socket,
     websocket: [connect_info: [session: @session_options], transport_log: :debug]
